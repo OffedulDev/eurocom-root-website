@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 31, 31);
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    border-bottom: 0.15rem solid white;
+}
+
+.header-logo {
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.header-links {
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+a {
+    color: white;
+}
+
+#services-table {
+    a {
+        color: green !important;
+    }
+}
+
+main {
+    margin-top: 4rem;
+}
+
+.hero {
+    background-image: url("./hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-weight: bolder;
+    font-size: 2.5rem;  
+}
+
+.hero-subtitle {
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background: rgb(66, 66, 66);
+}
+
+section {
+    padding: 2rem;
+}
+
+table {
+    border: none;
+    /*border-collapse: collapse;*/
+}
+
+td {
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tr {
+    background-color: white;
+    color: black;
+}
+
+.reserved-row {
+    background-color: red;
+    color: white;
+}
+
+tr:first-child {
+    background-color: gray;
+    font-weight: bolder;
+    
+    th {
+        box-sizing: border-box;
+        padding: 0.5rem;
+    }
+}

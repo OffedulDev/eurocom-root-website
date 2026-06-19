@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eurocom</title>
+</head>
+
+<body>
+    <header>
+        <span class="header-logo"><a href="#hero" style="text-decoration: none;">eurocom.dn42</a></span>
+
+        <div class="header-links">
+            <a href="#nodes">Nodes</a>
+            <a href="#peering">Peering</a>
+        </div>
+    </header>
+    <main>
+        <div class="hero" id="hero">
+            <span class="hero-title">AS4242421258</span>
+            <span class="hero-subtitle">I'm an 18 years old IT student from Italy 🇮🇹.</span>
+            <span>This is my little space to practice and learn how real networks work. I hope you'll enjoy it!
+                😀</span>
+        </div>
+
+        <section>
+            <h3>What is Eurocom?</h3>
+            <p>Eurocom is just a fictional ISP I thought of. I started it to have a more hands-on experience
+                learning BGP, OSPF and other routing protocols as well as network designs and much more. 
+                At the moment it's very basic but my goal is to
+                increasingly make it more complex and efficient.</p>
+            <p>
+                👆 fun fact: the picture seen above has been taken in my homelab where eurocom's first edge router is running!
+            </p>
+
+            <h3>IPAM</h3>
+            <p>Here is a rough idea of how our allocation is being used.</p>
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                    <th>IPv4 Subnet</th>
+                    <th>IPv6 Subnet</th>
+                    <th>IPv4</th>
+                    <th>IPv6</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>172.21.118.192/29</td>
+                    <td>fd49:1b9:8a02:feed::/64</td>
+                    <td></td>
+                    <td></td>
+                    <td>edge routers / core infrastructure</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>172.21.118.193</td>
+                    <td>fd49:1b9:8a02:feed::1</td>
+                    <td>cremona edge router</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>172.21.118.195</td>
+                    <td>fd49:1b9:8a02:feed::2</td>
+                    <td>switzerland edge router</td>
+                </tr>
+                <tr>
+                    <td>172.21.118.200/29</td>
+                    <td>fd49:1b9:8a02:cafe::/64</td>
+                    <td></td>
+                    <td></td>
+                    <td>services</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>172.21.118.201</td>
+                    <td>fd49:1b9:8a02:cafe::1</td>
+                    <td>eurocom root website (this website!)</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr class="reserved-row">
+                    <td></td>
+                    <td></td>
+                    <td>172.21.118.194</td>
+                    <td>fd49:1b9:8a02::4242</td>
+                    <td>RESERVED: primary nameservers</td>
+                </tr>
+            </table>
+            
+            <h3>Services</h3>
+            <p>As of now we run the following services for our network:</p>
+            <table style="margin-left: auto; margin-right: auto;" id="services-table">
+                <tr>
+                    <th>Clearnet domain</th>
+                    <th>DN42 domain</th>
+                    <th>Service</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://dn42.sloppybits.uk">https://dn42.sloppybits.uk</a>
+                    </td>
+                    <td>
+                        <a target="_blank" href="http://eurocom.dn42">http://eurocom.dn42</a>
+                    </td>
+                    <td>this website</td>
+                </tr>
+            </table>
+
+            <h3 id="nodes">Nodes</h3>
+            <p>Here is a list of currently running edge routers for peering</p>
+            <table style="margin-left: auto; margin-right: auto;" id="services-table">
+                <tr>
+                    <th>Clearnet domain</th>
+                    <th>DN42 domain</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>
+                        edge1.cr.infra.dn42.sloppybits.uk
+                    </td>
+                    <td>
+                        edge1.cr.infra.eurocom.dn42
+                    </td>
+                    <td>Italy 🇮🇹</td>
+                </tr>
+                <tr>
+                    <td>
+                        edge1.ch.infra.dn42.sloppybits.uk
+                    </td>
+                    <td>
+                        edge1.ch.infra.eurocom.dn42
+                    </td>
+                    <td>Switzerland 🇨🇭</td>
+                </tr>
+            </table>
+
+            <h3 id="peering">Peering</h3>
+            <p>
+                I'm always open to peer with anyone with reasonable latency, if you want to peer with me contact me via one of these methods:
+                <ul>
+                    <li>
+                        email: <a href="mailto:filippo@sloppybits.uk">filippo&lt;at&gt;sloppybits&lt;dot&gt;uk</a> (recommended)
+                    </li>
+                    <li>
+                        IRC: filippo-dn42 on <a href="https://www.hackint.org/">irc.hackint.org</a>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                My ideal configuration is:
+                <ul>
+                    <li>BGP Multiprotocol</li>
+                    <li>WireGuard</li>
+                </ul>
+                If you have specific requirements or suggestions I'm happy to adapt and learn new stuff! Do note that <b>some of my nodes are clearnet IPv6 only</b>.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <span>Made with ❤️ by <a target="_blank" href="https://www.sloppybits.uk">Filippo Caminati</a></span>
+        <span>This website is also accessible on the DN42 network at <a href="http://eurocom.dn42">http://eurocom.dn42</a></span>
+    </footer>
+</body>
+
+</html>
