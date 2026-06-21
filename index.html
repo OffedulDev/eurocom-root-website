@@ -28,7 +28,7 @@
         <section>
             <h3>What is Eurocom?</h3>
             <p>Eurocom is just a fictional ISP I thought of. I started it to have a more hands-on experience
-                learning BGP, OSPF and other routing protocols as well as network designs and much more. 
+                learning BGP, OSPF and other routing protocols as well as network designs and much more.
                 At the moment it's very basic but my goal is to
                 increasingly make it more complex and efficient.</p>
             <p>
@@ -57,28 +57,28 @@
                     <td></td>
                     <td>172.21.118.193</td>
                     <td>fd49:1b9:8a02:feed::1</td>
-                    <td>cremona edge router</td>
+                    <td>IT-CRE1 edge router</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>172.21.118.195</td>
                     <td>fd49:1b9:8a02:feed::2</td>
-                    <td>switzerland edge router</td>
+                    <td>CH-ZRH1 edge router</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>172.21.118.196</td>
+                    <td>fd49:1b9:8a02:feed::3</td>
+                    <td>CH-ZRH2 core router</td>
                 </tr>
                 <tr>
                     <td>172.21.118.200/29</td>
                     <td>fd49:1b9:8a02:cafe::/64</td>
                     <td></td>
                     <td></td>
-                    <td>services</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>172.21.118.201</td>
-                    <td>fd49:1b9:8a02:cafe::1</td>
-                    <td>eurocom root website (this website!)</td>
+                    <td>CH-ZRH2 services</td>
                 </tr>
 
                 <tr>
@@ -97,7 +97,7 @@
                     <td>RESERVED: primary nameservers</td>
                 </tr>
             </table>
-            
+
             <h3>Services</h3>
             <p>As of now we run the following services for our network:</p>
             <table style="margin-left: auto; margin-right: auto;" id="services-table">
@@ -121,11 +121,13 @@
             <p>Here is a list of currently running edge routers for peering</p>
             <table style="margin-left: auto; margin-right: auto;" id="services-table">
                 <tr>
+                    <th>Node Name</th>
                     <th>Clearnet domain</th>
                     <th>DN42 domain</th>
                     <th>Location</th>
                 </tr>
                 <tr>
+                    <td>IT-CRE1</td>
                     <td>
                         edge1.cr.infra.dn42.sloppybits.uk
                     </td>
@@ -135,6 +137,7 @@
                     <td>Italy 🇮🇹</td>
                 </tr>
                 <tr>
+                    <td>CH-ZRH1</td>
                     <td>
                         edge1.ch.infra.dn42.sloppybits.uk
                     </td>
